@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- BACKGROUND -->
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="420dp"
+        android:layout_height="888dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bgone" />
+
+    <ImageView
+        android:id="@+id/board"
+        android:layout_width="400dp"
+        android:layout_height="252dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/board" />
+
+    <!-- LEFT -->
+
+    <!-- RIGHT -->
+
+    <ImageView
+        android:id="@+id/leftItem"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/board"
+        app:layout_constraintEnd_toStartOf="@id/plus"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/board"
+        app:layout_constraintTop_toTopOf="@id/board"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <ImageView
+        android:id="@+id/rightItem"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/board"
+        app:layout_constraintEnd_toEndOf="@id/board"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/plus"
+        app:layout_constraintTop_toTopOf="@id/board"
+        app:layout_constraintVertical_bias="0.727" />
+
+    <!-- INGREDIENTS -->
+    <TextView
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="@id/board"
+        app:layout_constraintEnd_toEndOf="@id/board"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/board"
+        app:layout_constraintTop_toTopOf="@id/board"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <ImageView
+        android:id="@+id/strawberry"
+        android:layout_width="106dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/strawberry" />
+
+    <ImageView
+        android:id="@+id/caramel"
+        android:layout_width="110dp"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/strawberry"
+        app:srcCompat="@drawable/caramel" />
+
+    <ImageView
+        android:id="@+id/chocolate"
+        android:layout_width="109dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/caramel"
+        app:srcCompat="@drawable/chocolate" />
+
+    <ImageView
+        android:id="@+id/sugar"
+        android:layout_width="102dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chocolate"
+        app:srcCompat="@drawable/sugar" />
+
+    <!-- RESULT POPUP -->
+    <FrameLayout
+        android:id="@+id/resultPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/resultBg"
+            android:layout_width="420dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:src="@drawable/result"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="420dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:id="@+id/resultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Donut Name"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/resultDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/resultFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨ You have created your own donut!"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--  INFO BUTTON -->
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="60dp"
+        android:layout_height="111dp"
+        app:srcCompat="@drawable/info"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+
+    <FrameLayout
+        android:id="@+id/infoPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/infoImage"
+            android:layout_width="380dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:src="@drawable/information"
+            android:scaleType="fitCenter" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
