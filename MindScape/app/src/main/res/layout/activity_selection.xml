@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selection_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg">
+
+    <ImageView
+        android:id="@+id/activity_title_text"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/activity_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/info_btn"
+        android:layout_width="106dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="4dp"
+        android:padding="10dp"
+        android:src="@drawable/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_learning"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/learning"
+        app:layout_constraintEnd_toStartOf="@+id/btn_meditating"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_title_text" />
+
+    <ImageView
+        android:id="@+id/btn_meditating"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/meditating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_learning"
+        app:layout_constraintTop_toTopOf="@id/btn_learning" />
+
+    <ImageView
+        android:id="@+id/btn_writing"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/writing"
+        app:layout_constraintEnd_toStartOf="@+id/btn_memorizing"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_learning" />
+
+    <ImageView
+        android:id="@+id/btn_memorizing"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/memorizing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_writing"
+        app:layout_constraintTop_toTopOf="@id/btn_writing" />
+
+    <ImageView
+        android:id="@+id/btn_exercising"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/exercising"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_writing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
